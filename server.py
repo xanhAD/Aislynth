@@ -15,7 +15,7 @@ def receive_msg(socket):
                 print("Ngắt kết nối")
                 socket.close()
                 break
-            print(f"\rClient: {data.decode("utf-8")
+            print(f"\rClient: {data.decode("utf-8")}")
             print("Me: ", end="", flush=True)
         except:
             print("Lỗi kết nối")
@@ -41,3 +41,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
         if msg.strip():
 
             client_socket.sendall(msg.encode("utf-8"))
+
